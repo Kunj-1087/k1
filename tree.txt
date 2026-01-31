@@ -1,0 +1,163 @@
+./
+    CONTRIBUTING.md # Guidelines for contributing to the project
+    generate_tree.py # Python script to generate this directory structure file
+    LICENSE # License information for the project
+    next-env.d.ts # TypeScript declaration file for Next.js types
+    next.config.js # Next.js configuration file
+    package-lock.json # Lockfile for npm dependencies
+    package.json # Project metadata and dependencies
+    postcss.config.js # Configuration for PostCSS
+    README.md # Project documentation and setup instructions
+    sanity.config.ts # Configuration for Sanity CMS
+    tailwind.config.js # Configuration for Tailwind CSS
+    tree.txt # Text representation of the project structure
+    tsconfig.json # TypeScript configuration file
+    app/ # Main application directory (Next.js App Router)
+        apple-icon.png # Apple touch icon
+        icon.png # Standard favicon
+        layout.tsx # Root layout component wrapping the entire app
+        not-found.tsx # Global 404 error page
+        page.tsx # Home page component
+        providers.tsx # Client-side context providers (Theme, etc.)
+        about/ # About page directory
+            page.tsx # About page component
+        animation/ # Animation components
+            Slide.tsx # Component for slide-in animations
+        api/ # API routes directory
+            revalidate/ # Revalidation API
+                route.ts # Route handler for revalidating Sanity data
+        assets/ # Static assets (fonts, icons)
+            font/ # Font files and loader
+                font.ts # Font loader utility
+                gitlab-mono.woff2 # GitLab Mono font file
+                incognito_bold.woff2 # Incognito Bold font file
+                incognito_condensed.woff2 # Incognito Condensed font file
+                incognito_medium.woff2 # Incognito Medium font file
+                incognito_regular.woff2 # Incognito Regular font file
+            icons/ # SVG Icon components
+                HeroSvg.tsx # Hero section SVG graphic
+                MoonIcon.tsx # Moon icon for dark mode
+                SunIcon.tsx # Sun icon for light mode
+        blog/ # Blog section directory
+            not-found.tsx # 404 page for blog routes
+            page.tsx # Main blog listing page
+            [post]/ # Dynamic route for single blog posts
+                loading.tsx # Loading state for blog posts
+                page.tsx # Single blog post page component
+        components/ # React components directory
+            global/ # Globally used components
+                Footer.tsx # Site footer component
+                MobileMenu.tsx # Mobile navigation menu
+                Navbar.tsx # Main navigation bar
+                Theme.tsx # Theme toggle button
+                Unmount.tsx # Component to handle unmounting animations
+            pages/ # Page-specific components
+                ContributionGraph.tsx # Wrapper for GitHub calendar
+                FeaturedPosts.tsx # Section displaying featured blog posts
+                GithubCalendarComponent.tsx # GitHub contribution calendar display
+                Heroes.tsx # Section displaying "Heroes" (people)
+                Job.tsx # Job history section
+                Posts.tsx # Blog posts list component
+                Usage.tsx # Tools and technologies usage section
+            shared/ # Reusable shared components
+                Accordion.tsx # Accordion UI component
+                Buymeacoffee.tsx # "Buy Me a Coffee" widget/link
+                Clipoboard.tsx # Copy to clipboard functionality
+                CodeBlock.tsx # Syntax highlighted code block for blog posts
+                Comments.tsx # Comments section component
+                CustomPortableText.tsx # Serializer for Sanity Portable Text
+                CustomPortableTextFavicon.tsx # Portable Text serializer for favicons
+                EasterEgg.tsx # Hidden easter egg component
+                EmailCopy.tsx # Component to copy email address
+                EmptyState.tsx # Fallback UI for empty states
+                HashScroll.tsx # Component handling hash link scrolling
+                ImageComponent.tsx # Optimized image component
+                NotFound.tsx # Reusable Not Found component
+                PageHeading.tsx # Standard page heading component
+                PortableImage.tsx # Image component for Portable Text
+                Quiz.tsx # Interactive quiz component
+                RefLink.tsx # Reference link component
+                SharePost.tsx # Social share buttons for posts
+                Social.tsx # Social media links component
+                Table.tsx # Table component for blog posts
+                YearButton.tsx # Filter button for years
+                YoutubeIframe.tsx # YouTube video embed component
+            widgets/ # Dashboard widgets
+                TableWidget.tsx # Table widget definition
+                YoutubeWidget.tsx # YouTube widget definition
+        data/ # Static data files
+            contribution-graph-theme.ts # Theme configuration for contribution graph
+            personal.ts # Personal information and mock data
+            posts.ts # Static blog post data
+            social.ts # Social media link data
+        photos/ # Photography portfolio section
+            page.tsx # Photos page component
+        projects/ # Projects portfolio section
+            page.tsx # Projects listing page
+            [project]/ # Dynamic route for single projects
+                loading.tsx # Loading state for project pages
+                page.tsx # Single project page details
+        studio/ # Sanity Studio embedded route
+            [[...index]]/ # Catch-all route for Sanity Studio
+                page.tsx # Sanity Studio page component
+        styles/ # CSS stylesheets
+            globals.css # Global CSS styles
+            prism.css # Syntax highlighting styles
+        utils/ # Utility functions
+            calculate-years.ts # Utility to calculate years duration
+            date.ts # Date formatting utilities
+            favicon.tsx # Favicon generation utility
+            get-youtubeId.ts # Helper to extract YouTube IDs
+            readTime.ts # Calculate reading time for posts
+    lib/ # Library code and configurations
+        env.api.ts # Environment variable helper
+        sanity.client.ts # Sanity client configuration and fetcher
+        sanity.image.ts # Sanity image URL builder
+        sanity.query.ts # GROQ queries for Sanity
+    public/ # Public static assets
+        about-profile.jpg # Profile image for about page
+        cool_dodge.gif # GIF asset
+        kunj-about.jpg # About page image
+        kunj-portrait.jpg # Portrait image
+        kunj-standing.jpg # Standing photo
+        logo.png # Site logo (PNG)
+        logo.svg # Site logo (SVG)
+        nextjs.svg # Next.js logo
+        noise.png # Background noise texture
+        project.png # Project placeholder image
+        sanity.png # Sanity logo
+        searching-duck.gif # Loading/Searching GIF
+        site.png # OG image / site preview
+        studio.png # Studio icon
+        vercel.svg # Vercel logo
+        yeah-right.png # Sticker image
+        blog/ # Blog post images
+            blog_data_science.png # Blog post cover
+            blog_data_science_v2.png # Blog post cover v2
+            blog_exploring_ai.png # Blog post cover
+            blog_just_show_up.png # Blog post cover
+            blog_startup_mindset.png # Blog post cover
+            blog_startup_mindset_v2.png # Blog post cover v2
+            data-science.png # Data science topic image
+            exploring-ai.png # AI topic image
+            portfolio-startup.png # Portfolio topic image
+            some-days-build.png # Build topic image
+        photos/ # Photography assets
+            photo-1.jpg # Photo sample 1
+            photo-2.jpg # Photo sample 2
+            photo-3-new.png # Photo sample 3 (updated)
+            photo-3.jpg # Photo sample 3
+    schemas/ # Sanity content schemas
+        author.ts # Author schema definition
+        blockContent.ts # Rich text block content schema
+        heroe.ts # Heroe (person) schema
+        index.ts # Schema registry/index
+        job.ts # Job/Experience schema
+        post.ts # Blog post schema
+        profile.ts # User profile schema
+        project.ts # Project case study schema
+        quiz.ts # Quiz schema
+        table.ts # Table schema
+        youtube.ts # YouTube embed schema
+    types/ # TypeScript type definitions
+        index.ts # Shared type interfaces
