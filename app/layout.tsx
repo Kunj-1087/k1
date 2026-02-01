@@ -54,9 +54,9 @@ export const metadata: Metadata = {
     "google-site-verification": "IzcWMgn5Qjf-LCtA337KTGjivsf9bmod_1pZ-jxYQh8",
   },
   icons: {
-    icon: "/kn-logo.png",
-    shortcut: "/kn-logo.png",
-    apple: "/kn-logo.png",
+    icon: "/branding-icon.png",
+    shortcut: "/branding-icon.png",
+    apple: "/branding-icon.png",
   },
 };
 
