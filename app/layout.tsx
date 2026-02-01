@@ -53,6 +53,11 @@ export const metadata: Metadata = {
   other: {
     "google-site-verification": "IzcWMgn5Qjf-LCtA337KTGjivsf9bmod_1pZ-jxYQh8",
   },
+  icons: {
+    icon: "/kn-logo.png",
+    shortcut: "/kn-logo.png",
+    apple: "/kn-logo.png",
+  },
 };
 
 export default function RootLayout({

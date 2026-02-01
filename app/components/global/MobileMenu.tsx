@@ -18,7 +18,7 @@ import {
   HiOutlineX,
   HiUser,
 } from "react-icons/hi";
-import Logo from "../../../public/logo.png";
+import Logo from "../../../public/kn-logo.png";
 
 export default function MobileMenu() {
   const [navShow, setNavShow] = useState(false);
