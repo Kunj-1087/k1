@@ -8,7 +8,7 @@ export const localPosts: PostType[] = [
     slug: "exploring-ai-my-first-steps",
     description: "When I first heard about AI, it felt like something out of a sci-fi movie—robots, self-driving cars, and computers that could think like humans. But as I started learning web development and coding, I kept running into AI everywhere.",
     coverImage: {
-      image: "/blog/blog_exploring_ai.png",
+      image: "/blog/b1.jpg",
       alt: "Artificial Intelligence Concept",
       lqip: "",
     },
@@ -327,7 +327,7 @@ export const localPosts: PostType[] = [
     slug: "introduction-to-data-science",
     description: "A few weeks ago, I was scrolling through job listings for tech roles, and I noticed something interesting: almost every position mentioned \"data-driven decisions\" or \"analytics experience.\"",
     coverImage: {
-      image: "/blog/blog_data_science_v2.png",
+      image: "/blog/b2.jpg",
       alt: "Data Science Concept",
       lqip: "",
     },
@@ -828,7 +828,7 @@ export const localPosts: PostType[] = [
     slug: "some-days-i-build",
     description: "There's this myth in tech that successful developers are constantly shipping projects, learning new frameworks, and grinding leetcode at 2 AM. That every day is productive, every commit is meaningful, and progress is always linear.",
     coverImage: {
-      image: "/blog/some-days-build.png",
+      image: "/blog/b3.jpg",
       alt: "Coding Motivation",
       lqip: "",
     },
@@ -1413,7 +1413,7 @@ export const localPosts: PostType[] = [
     slug: "portfolio-as-a-startup",
     description: "When I started learning web development, I thought my portfolio was just a website where I'd dump my projects. A digital resume. Something I'd build once and forget about. I was completely wrong.",
     coverImage: {
-      image: "/blog/blog_startup_mindset_v2.png",
+      image: "/blog/b4.jpg",
       alt: "Portfolio Startup Mindset",
       lqip: "",
     },

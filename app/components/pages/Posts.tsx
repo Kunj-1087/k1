@@ -31,7 +31,16 @@ export default async function Posts() {
     posts = [];
   }
 
+  const customOrder = ["local-1", "local-2", "local-4", "local-3"];
+
   const allPosts = [...posts, ...localPosts].sort((a, b) => {
+    const indexA = customOrder.indexOf(a._id);
+    const indexB = customOrder.indexOf(b._id);
+
+    if (indexA !== -1 && indexB !== -1) return indexA - indexB;
+    if (indexA !== -1) return -1;
+    if (indexB !== -1) return 1;
+
     return (
       new Date(b.date || b._createdAt).getTime() -
       new Date(a.date || a._createdAt).getTime()
