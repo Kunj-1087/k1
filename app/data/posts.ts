@@ -8,7 +8,7 @@ export const localPosts: PostType[] = [
     slug: "exploring-ai-my-first-steps",
     description: "When I first heard about AI, it felt like something out of a sci-fi movie—robots, self-driving cars, and computers that could think like humans. But as I started learning web development and coding, I kept running into AI everywhere.",
     coverImage: {
-      image: "/blog/b1.jpg",
+      image: "/blog/b2.jpg",
       alt: "Artificial Intelligence Concept",
       lqip: "",
     },
@@ -327,7 +327,7 @@ export const localPosts: PostType[] = [
     slug: "introduction-to-data-science",
     description: "A few weeks ago, I was scrolling through job listings for tech roles, and I noticed something interesting: almost every position mentioned \"data-driven decisions\" or \"analytics experience.\"",
     coverImage: {
-      image: "/blog/b2.jpg",
+      image: "/blog/b1.jpg",
       alt: "Data Science Concept",
       lqip: "",
     },
