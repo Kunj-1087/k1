@@ -12,7 +12,7 @@ import SharePost from "../../components/shared/SharePost";
 import FeaturedPosts from "../../components/pages/FeaturedPosts";
 import { Slide } from "../../animation/Slide";
 import { urlFor } from "@/lib/sanity.image";
-import Buymeacoffee from "@/app/components/shared/Buymeacoffee";
+
 import Comments from "@/app/components/shared/Comments";
 import { HiCalendar, HiChat } from "react-icons/hi";
 import { sanityFetch } from "@/lib/sanity.client";
@@ -239,10 +239,20 @@ export default async function Post({ params }: Props) {
       </section>
 
       <section className="max-w-3xl lg:py-10 pt-0">
-        <h3 className="lg:text-4xl text-3xl font-semibold tracking-tight mb-8">
-          Support
-        </h3>
-        <Buymeacoffee />
+        <div className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-zinc-50 dark:bg-[#151515] p-8">
+          <h3 className="text-xl font-semibold tracking-tight mb-4 text-zinc-900 dark:text-gray-100">
+            Closing Thoughts
+          </h3>
+          <p className="text-zinc-600 dark:text-zinc-400 leading-relaxed mb-6">
+            This post is part of my ongoing learning journey in tech. I write to
+            clarify my understanding, reflect on what I’m building, and share
+            insights as I grow. If you’re exploring similar ideas, I hope this
+            gave you something useful to think about.
+          </p>
+          <p className="text-zinc-500 dark:text-zinc-500 italic text-sm">
+            More experiments, lessons, and reflections coming soon.
+          </p>
+        </div>
       </section>
     </main>
   );
