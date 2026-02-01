@@ -24,7 +24,7 @@ export default function Contact() {
       </Slide>
 
       <Slide delay={0.2}>
-        <form className="mt-10 max-w-3xl w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-6">
+        <form className="mt-10 max-w-[60rem] w-full bg-zinc-50 dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 p-6 rounded-2xl space-y-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
             <div className="flex flex-col gap-y-2">
               <label htmlFor="name" className="font-medium text-zinc-900 dark:text-zinc-100">

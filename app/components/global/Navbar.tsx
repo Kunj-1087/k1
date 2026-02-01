@@ -1,20 +1,14 @@
-/**
- * File: app/components/global/Navbar.tsx
- * Function: Global Navigation Bar
- * Purpose: Provides the primary navigation links and includes the theme toggle and mobile menu.
- * Linked to:
- * - app/layout.tsx (Rendered at the top of the root layout)
- * - app/components/global/Theme.tsx (Theme toggler)
- * - app/components/global/MobileMenu.tsx (Mobile navigation menu)
- * - app/components/global/Unmount.tsx (Wraps content)
- */
+"use client";
 
 import Link from "next/link";
 import Theme from "./Theme";
 import UnmountStudio from "./Unmount";
 import MobileMenu from "./MobileMenu";
+import { usePathname } from "next/navigation";
 
 export default function Navbar() {
+  const pathname = usePathname();
+
   const data = [
     {
       title: "About",
@@ -55,7 +49,11 @@ export default function Navbar() {
                 <li key={id}>
                   <Link
                     href={link.href}
-                    className="font-incognito dark:text-white text-zinc-600 dark:hover:text-primary-color hover:text-zinc-900 duration-300 text-base"
+                    className={`font-incognito text-base duration-300 ${
+                      pathname === link.href
+                        ? "dark:text-primary-color text-zinc-900 font-semibold"
+                        : "dark:text-white text-zinc-600 dark:hover:text-primary-color hover:text-zinc-900"
+                    }`}
                   >
                     {link.title}
                   </Link>

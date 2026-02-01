@@ -10,6 +10,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 import { RxHamburgerMenu } from "react-icons/rx";
 import {
   HiBeaker,
@@ -22,6 +23,7 @@ import {
 import Logo from "../../../public/branding-icon.png";
 
 export default function MobileMenu() {
+  const pathname = usePathname();
   const [navShow, setNavShow] = useState(false);
   const data = [
     {
@@ -96,11 +98,17 @@ export default function MobileMenu() {
             <Link
               key={link.title}
               href={link.href}
-              className="flex items-center gap-x-2 font-incognito font-semibold text-lg dark:shadow-line-dark shadow-line-light p-6 group"
+              className={`flex items-center gap-x-2 font-incognito font-semibold text-lg dark:shadow-line-dark shadow-line-light p-6 group ${
+                pathname === link.href ? "dark:text-primary-color text-zinc-900" : "text-zinc-500"
+              }`}
               onClick={onToggleNav}
             >
               <link.icon
-                className="text-zinc-500 group-hover:dark:text-white group-hover:text-zinc-800 duration-300"
+                className={`${
+                  pathname === link.href
+                    ? "text-zinc-900 dark:text-primary-color"
+                    : "text-zinc-500 group-hover:dark:text-white group-hover:text-zinc-800"
+                } duration-300`}
                 aria-hidden="true"
               />
               {link.title}
