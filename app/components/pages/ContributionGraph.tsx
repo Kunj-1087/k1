@@ -19,8 +19,6 @@ export default function ContributionGraph() {
   const scheme =
     theme === "light" ? "light" : theme === "dark" ? "dark" : systemTheme;
 
-  // Set theme only after rendering to avoid mismatch between client and server
-  // https://github.com/vercel/next.js/issues/10608#issuecomment-589073831
   useEffect(() => {
     setServerTheme(scheme);
   }, [scheme]);
@@ -40,18 +38,19 @@ export default function ContributionGraph() {
     );
 
   return (
-    <div className="flex xl:flex-row flex-col gap-4">
-      <div className="dark:bg-primary-bg bg-secondary-bg border dark:border-zinc-800 border-zinc-200 p-8 rounded-lg max-w-fit max-h-fit">
-        <GitHubCalendar
-          username={username}
-          theme={github}
-          colorScheme={serverTheme}
-          blockSize={13}
-          year={calendarYear}
-        />
+    <div className="flex xl:flex-row flex-col gap-4 sm:gap-6">
+      <div className="dark:bg-primary-bg bg-secondary-bg border dark:border-zinc-800 border-zinc-200 p-4 sm:p-6 lg:p-8 rounded-lg max-w-full xl:max-w-fit overflow-x-auto">
+        <div className="min-w-[600px]">
+          <GitHubCalendar
+            username={username}
+            theme={github}
+            colorScheme={serverTheme}
+            blockSize={11}
+            year={calendarYear}
+          />
+        </div>
       </div>
       <div className="flex justify-start xl:flex-col flex-row flex-wrap gap-2">
-        {/* Display only the last five years */}
         {years.slice(0, 5).map((year) => (
           <YearButton
             key={year}

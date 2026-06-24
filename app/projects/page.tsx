@@ -28,7 +28,7 @@ export default async function Project() {
   });
 
   return (
-    <main className="max-w-7xl mx-auto md:px-16 px-6">
+    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-4 sm:mt-8 lg:mt-0">
       <PageHeading
         title="Projects"
         description="A curated selection of engineering initiatives focused on scalable systems, real-world data analysis, and end-to-end implementation. These projects demonstrate a commitment to rigorous fundamentals, clean architecture, and practical problem-solving."
@@ -36,12 +36,12 @@ export default async function Project() {
 
       <Slide delay={0.1}>
         {projects.length > 0 ? (
-          <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-5 mb-12">
+          <section className="grid xl:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-4 sm:gap-5 mb-12">
             {projects.map((project) => (
               <Link
                 href={`/projects/${project.slug}`}
                 key={project._id}
-                className="flex items-center gap-x-4 dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-4 rounded-lg"
+                className="flex items-center gap-x-4 dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-4 sm:p-4 rounded-lg transition-colors duration-200"
               >
                 {project.logo ? (
                   <Image
@@ -49,16 +49,16 @@ export default async function Project() {
                     width={60}
                     height={60}
                     alt={project.name}
-                    className="dark:bg-zinc-800 bg-zinc-100 rounded-md p-2"
+                    className="dark:bg-zinc-800 bg-zinc-100 rounded-md p-2 flex-shrink-0"
                   />
                 ) : (
-                  <div className="dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-2 rounded-lg text-3xl">
+                  <div className="dark:bg-primary-bg bg-zinc-50 border border-transparent dark:hover:border-zinc-700 hover:border-zinc-200 p-2 rounded-lg text-3xl flex-shrink-0">
                     🪴
                   </div>
                 )}
-                <div>
-                  <h2 className="text-lg tracking-wide mb-1">{project.name}</h2>
-                  <div className="text-sm dark:text-zinc-400 text-zinc-600">
+                <div className="min-w-0">
+                  <h2 className="text-base sm:text-lg tracking-wide mb-1">{project.name}</h2>
+                  <div className="text-xs sm:text-sm dark:text-zinc-400 text-zinc-600 line-clamp-2">
                     {project.tagline}
                   </div>
                 </div>

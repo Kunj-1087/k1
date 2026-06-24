@@ -5,9 +5,7 @@ import type { PostType } from "@/types";
 import { sanityFetch } from "@/lib/sanity.client";
 import { localPosts } from "@/app/data/posts";
 
-const fallbackImage = "/kunj-portrait.jpg"; // Use Kunj's placeholder as fallback
-
-
+const fallbackImage = "/kunj-portrait.jpg";
 
 export default async function FeaturedPosts({ params }: { params?: string }) {
   const posts: PostType[] = await sanityFetch({
@@ -25,12 +23,12 @@ export default async function FeaturedPosts({ params }: { params?: string }) {
         post.featured !== true || post.isPublished !== true ? null : (
           <article
             key={post._id}
-            className={`mb-4 ${post.slug === params ? "hidden" : "flex lg:flex-row flex-col"
+            className={`mb-3 sm:mb-4 ${post.slug === params ? "hidden" : "flex lg:flex-row flex-col"
               }`}
           >
             <Link
               href={`/blog/${post.slug}`}
-              className="flex flex-col gap-4 dark:bg-primary-bg bg-secondary-bg p-5 rounded-lg border dark:border-zinc-800 border-zinc-200"
+              className="flex flex-col gap-3 sm:gap-4 dark:bg-primary-bg bg-secondary-bg p-3 sm:p-4 lg:p-5 rounded-lg border dark:border-zinc-800 border-zinc-200"
             >
               <Image
                 src={post.coverImage?.image || fallbackImage}
@@ -44,10 +42,10 @@ export default async function FeaturedPosts({ params }: { params?: string }) {
                 loading="lazy"
               />
               <div className="max-w-lg">
-                <h2 className="max-w-sm text-lg tracking-tight mb-4">
+                <h2 className="max-w-sm text-sm sm:text-base lg:text-lg tracking-tight mb-2 sm:mb-4">
                   {post.title}
                 </h2>
-                <p className="dark:text-zinc-400 text-zinc-600 text-sm">
+                <p className="dark:text-zinc-400 text-zinc-600 text-xs sm:text-sm">
                   {post.description.slice(0, 80).padEnd(83, "...")}
                 </p>
               </div>

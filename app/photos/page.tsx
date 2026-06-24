@@ -36,23 +36,26 @@ export const metadata: Metadata = {
 
 export default function Photos() {
   return (
-    <main className="max-w-7xl mx-auto md:px-16 px-6 lg:mt-32 mt-20">
+    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-4 sm:mt-8 lg:mt-0">
       <PageHeading
         title="Photos"
         description="Here are some photos from my life."
       />
       <figure className="my-6">
-        <Slide delay={0.12} className="flex flex-wrap gap-2">
-          {images.map((image) => (
-            <Image
-              key={image.id}
-              src={image.src}
-              alt={image.alt}
-              width={350}
-              height={500}
-              className="dark:bg-primary-bg bg-secondary-bg object-cover rounded-md"
-            />
-          ))}
+        <Slide delay={0.12}>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
+            {images.map((image) => (
+              <div key={image.id} className="relative aspect-[3/4] w-full overflow-hidden rounded-md">
+                <Image
+                  src={image.src}
+                  alt={image.alt}
+                  fill
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  className="object-cover dark:bg-primary-bg bg-secondary-bg"
+                />
+              </div>
+            ))}
+          </div>
         </Slide>
       </figure>
     </main>

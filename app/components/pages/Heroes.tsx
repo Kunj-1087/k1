@@ -12,10 +12,10 @@ export default async function Heroes() {
   });
 
   return (
-    <section className="mt-32 max-w-5xl">
+    <section className="mt-16 sm:mt-24 lg:mt-32 max-w-5xl">
       <Slide delay={0.17}>
-        <h2 className="text-4xl mb-4 font-bold tracking-tight">Heroes</h2>
-        <p className="dark:text-zinc-400 text-zinc-600 max-w-2xl">
+        <h2 className="text-2xl sm:text-3xl lg:text-4xl mb-4 font-bold tracking-tight">Heroes</h2>
+        <p className="dark:text-zinc-400 text-zinc-600 max-w-2xl text-sm sm:text-base">
           Inspired by{" "}
           <RefLink
             href="https://rafa.design"
@@ -31,16 +31,16 @@ export default async function Heroes() {
         </p>
       </Slide>
 
-      <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-6 mt-12 tracking-tight">
+      <ul className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-3 sm:gap-6 mt-8 sm:mt-12 tracking-tight">
         {heroes.map((heroe) => (
           <li
             key={heroe._id}
-            className="flex items-center gap-x-2 dark:bg-primary-bg bg-zinc-100 border dark:border-zinc-800 border-zinc-200 rounded-md px-2 py-1"
+            className="flex items-center gap-x-2 dark:bg-primary-bg bg-zinc-100 border dark:border-zinc-800 border-zinc-200 rounded-md px-3 py-2 sm:px-2 sm:py-1"
           >
             <EasterEgg isMet={heroe.met} />
             <RefLink
               href={heroe.url}
-              className={`font-incognito tracking-wide hover:underline ${
+              className={`font-incognito tracking-wide hover:underline text-sm sm:text-base ${
                 heroe.met && "dark:text-green-300 text-green-800"
               }`}
             >

@@ -15,39 +15,41 @@ export default function Table({ value }: { value: TableValueProps }) {
   }
 
   return (
-    <table className="border dark:border-zinc-800 border-zinc-200 w-full text-base my-4">
-      {caption && (
-        <caption className="text-lg font-incognito font-medium my-1">
-          {caption}
-        </caption>
-      )}
-      <thead className="bg-zinc-50 dark:bg-[#141414] border-b dark:border-zinc-800 border-zinc-200 text-left">
-        <tr className="divide-x divide-zinc-200 dark:divide-zinc-800">
-          {tableHeading.map((heading) => (
-            <th
-              key={heading}
-              scope="col"
-              className="font-medium text-lg font-incognito px-3 py-2"
-            >
-              {heading}
-            </th>
-          ))}
-        </tr>
-      </thead>
-      <tbody>
-        {tableBody.map((row, index) => (
-          <tr
-            key={index}
-            className="divide-x divide-zinc-200 dark:divide-zinc-800 border dark:border-zinc-800 border-zinc-200"
-          >
-            {row.map((cell) => (
-              <td key={cell} className="px-3 py-2">
-                {cell}
-              </td>
+    <div className="overflow-x-auto my-4">
+      <table className="border dark:border-zinc-800 border-zinc-200 w-full text-sm sm:text-base min-w-[400px]">
+        {caption && (
+          <caption className="text-base sm:text-lg font-incognito font-medium my-1">
+            {caption}
+          </caption>
+        )}
+        <thead className="bg-zinc-50 dark:bg-[#141414] border-b dark:border-zinc-800 border-zinc-200 text-left">
+          <tr className="divide-x divide-zinc-200 dark:divide-zinc-800">
+            {tableHeading.map((heading) => (
+              <th
+                key={heading}
+                scope="col"
+                className="font-medium text-sm sm:text-lg font-incognito px-2 sm:px-3 py-1.5 sm:py-2"
+              >
+                {heading}
+              </th>
             ))}
           </tr>
-        ))}
-      </tbody>
-    </table>
+        </thead>
+        <tbody>
+          {tableBody.map((row, index) => (
+            <tr
+              key={index}
+              className="divide-x divide-zinc-200 dark:divide-zinc-800 border dark:border-zinc-800 border-zinc-200"
+            >
+              {row.map((cell) => (
+                <td key={cell} className="px-2 sm:px-3 py-1.5 sm:py-2">
+                  {cell}
+                </td>
+              ))}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
   );
 }

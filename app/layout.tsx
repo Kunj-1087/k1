@@ -1,14 +1,3 @@
-/**
- * File: app/layout.tsx
- * Function: Root Layout
- * Purpose: Defines the global structure of the application, including fonts, metadata, and global providers.
- * Linked to: 
- * - app/styles/globals.css (Global styles)
- * - app/providers.tsx (Theme provider)
- * - app/components/global/Navbar.tsx (Navigation bar)
- * - app/components/global/Footer.tsx (Footer)
- */
-
 import "@/app/styles/globals.css";
 import Script from "next/script";
 import type { Metadata } from "next";
@@ -29,9 +18,9 @@ const options = {
   title: "Kunj Nakrani | Data Science & Full-Stack Developer",
   description:
     "Kunj Nakrani is a Tech Learner, Data Science enthusiast and Full-Stack Developer building the future.",
-  url: "https://kunjnakrani.vercel.app", // Placeholder URL
+  url: "https://kunjnakrani.vercel.app",
   ogImage:
-    "https://github.com/Kunj-1087.png", // Keeping placeholder but pointing to user controlled resource ideally
+    "https://github.com/Kunj-1087.png",
 };
 
 export const metadata: Metadata = {
@@ -68,11 +57,13 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700`}
+        className={`${incognito.variable} ${inter.className} ${gitlabmono.variable} dark:bg-zinc-900 bg-white dark:text-white text-zinc-700 antialiased`}
       >
         <Providers>
           <Navbar />
-          {children}
+          <main className="min-h-screen">
+            {children}
+          </main>
           <Footer />
         </Providers>
       </body>
