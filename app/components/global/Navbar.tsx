@@ -54,7 +54,7 @@ export default function Navbar() {
         <div className="max-w-[1280px] mx-auto flex items-center justify-between">
           <Link
             href="/"
-            className="font-incognito font-bold text-base sm:text-lg h-9 w-9 flex items-center justify-center dark:text-white text-zinc-900 border border-[#6B7280] rounded-md bg-transparent hover:border-primary-color dark:hover:border-primary-color duration-300"
+            className="font-incognito font-bold text-lg sm:text-xl h-9 w-9 flex items-center justify-center dark:text-white text-zinc-900 border border-[#6B7280] rounded-md bg-transparent hover:border-primary-color dark:hover:border-primary-color duration-300"
           >
             KN
           </Link>
