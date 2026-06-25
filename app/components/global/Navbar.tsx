@@ -45,7 +45,7 @@ export default function Navbar() {
   return (
     <UnmountStudio>
       <header
-        className={`text-sm py-4 sm:py-5 md:py-6 md:px-16 px-4 sm:px-6 border-b dark:border-zinc-800 border-zinc-200 z-30 md:mb-28 mb-8 sm:mb-10 fixed top-0 left-0 right-0 w-full transition-all duration-300 ${
+        className={`text-sm py-4 md:py-5 md:px-16 px-4 sm:px-6 border-b dark:border-zinc-800 border-zinc-200 z-30 md:mb-28 mb-8 sm:mb-10 fixed top-0 left-0 right-0 w-full transition-all duration-300 ${
           scrolled
             ? "dark:bg-zinc-900/95 bg-white/95 backdrop-blur-md shadow-sm dark:shadow-zinc-800/20"
             : "dark:bg-zinc-900 bg-white"
@@ -85,7 +85,7 @@ export default function Navbar() {
         </div>
       </header>
       {/* Spacer to prevent content from hiding under fixed header */}
-      <div className="h-[57px] sm:h-[65px] md:h-[73px]" />
+      <div className="h-[53px] md:h-[61px]" />
     </UnmountStudio>
   );
 }
