@@ -24,13 +24,13 @@ export default function Theme() {
 
   if (!hasMounted)
     return (
-      <span className="animate-pulse min-w-[28px] min-h-[28px] p-2 rounded-full dark:bg-zinc-800 bg-zinc-200 border dark:border-zinc-700 border-zinc-300"></span>
+      <span className="animate-pulse w-9 h-9 rounded-full dark:bg-zinc-800 bg-zinc-200 border dark:border-zinc-700 border-zinc-300"></span>
     );
 
   return (
     <button
       onClick={toggleTheme}
-      className={`dark:bg-primary-bg bg-zinc-100 dark:text-primary-color text-zinc-500 border dark:border-[#6B7280] border-[#9CA3AF] rounded-full p-2 duration-300 transition-transform group: ${
+      className={`dark:bg-primary-bg bg-zinc-100 dark:text-primary-color text-zinc-500 border dark:border-[#6B7280] border-[#9CA3AF] rounded-full w-9 h-9 flex items-center justify-center duration-300 transition-transform group: ${
         currentTheme === "light" ? "-rotate-180" : "rotate-0"
       }`}
       aria-label="Toggle Theme"
