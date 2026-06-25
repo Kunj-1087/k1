@@ -102,7 +102,7 @@ export default async function Post({ params }: Props) {
   const words = toPlainText(post.body);
 
   return (
-    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-4 sm:mt-8 lg:mt-0">
+    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-8 sm:mt-12 lg:mt-16">
       <header>
         <Slide className="relative flex items-center gap-x-2 border-b dark:border-zinc-800 border-zinc-200 pb-6 sm:pb-8">
           <Link

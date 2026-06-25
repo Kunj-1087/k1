@@ -51,7 +51,7 @@ export default async function Project({ params }: Props) {
   });
 
   return (
-    <main className="max-w-6xl mx-auto md:px-16 px-4 sm:px-6 mt-4 sm:mt-8 lg:mt-0">
+    <main className="max-w-6xl mx-auto md:px-16 px-4 sm:px-6 mt-8 sm:mt-12 lg:mt-16">
       <Slide>
         <div className="max-w-3xl mx-auto">
           <div className="flex flex-col sm:flex-row items-start justify-between gap-4 mb-4 sm:mb-4">

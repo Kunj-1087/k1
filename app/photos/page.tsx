@@ -36,7 +36,7 @@ export const metadata: Metadata = {
 
 export default function Photos() {
   return (
-    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-4 sm:mt-8 lg:mt-0">
+    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-8 sm:mt-12 lg:mt-16">
       <PageHeading
         title="Photos"
         description="Here are some photos from my life."

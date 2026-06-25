@@ -45,16 +45,16 @@ export default function Navbar() {
   return (
     <UnmountStudio>
       <header
-        className={`text-sm py-4 md:py-5 md:px-16 px-4 sm:px-6 border-b dark:border-zinc-800 border-zinc-200 z-30 md:mb-28 mb-8 sm:mb-10 fixed top-0 left-0 right-0 w-full transition-all duration-300 ${
+        className={`py-2 md:h-14 md:px-10 px-4 sm:px-6 border-b dark:border-zinc-800 border-zinc-200 z-30 fixed top-0 left-0 right-0 w-full transition-all duration-300 ${
           scrolled
             ? "dark:bg-zinc-900/95 bg-white/95 backdrop-blur-md shadow-sm dark:shadow-zinc-800/20"
             : "dark:bg-zinc-900 bg-white"
         }`}
       >
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div className="max-w-[1280px] mx-auto flex items-center justify-between">
           <Link
             href="/"
-            className="font-incognito font-bold text-lg sm:text-xl dark:text-white text-zinc-900 border border-[#6B7280] rounded-md px-2 py-1 bg-transparent hover:border-primary-color dark:hover:border-primary-color duration-300"
+            className="font-incognito font-bold text-lg sm:text-xl h-[36px] flex items-center dark:text-white text-zinc-900 border border-[#6B7280] rounded-md px-2 bg-transparent hover:border-primary-color dark:hover:border-primary-color duration-300"
           >
             KN
           </Link>
@@ -65,7 +65,7 @@ export default function Navbar() {
                 <li key={id}>
                   <Link
                     href={link.href}
-                    className={`font-incognito text-sm lg:text-base duration-300 ${
+                    className={`font-incognito text-base font-medium duration-300 ${
                       pathname === link.href
                         ? "dark:text-primary-color text-zinc-900 font-semibold"
                         : "dark:text-white text-zinc-600 dark:hover:text-primary-color hover:text-zinc-900"
@@ -85,7 +85,7 @@ export default function Navbar() {
         </div>
       </header>
       {/* Spacer to prevent content from hiding under fixed header */}
-      <div className="h-[53px] md:h-[61px]" />
+      <div className="h-[60px] md:h-14" />
     </UnmountStudio>
   );
 }

@@ -36,9 +36,9 @@ export default async function About() {
   });
 
   return (
-    <main className="relative max-w-7xl mx-auto md:px-16 px-4 sm:px-6">
+    <main className="relative max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-8 sm:mt-12 lg:mt-16">
       <div key={profile?._id}>
-        <section className="relative grid lg:grid-cols-custom grid-cols-1 gap-x-6 justify-items-center mt-4 sm:mt-8 lg:mt-0">
+        <section className="relative grid lg:grid-cols-custom grid-cols-1 gap-x-6 justify-items-center">
           <div className="order-2 lg:order-none">
             <Slide>
               <h1 className="font-incognito font-semibold tracking-tight text-2xl sm:text-3xl md:text-4xl lg:text-5xl lg:leading-tight leading-tight mb-6 sm:mb-8">

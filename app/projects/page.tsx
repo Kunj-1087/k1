@@ -28,7 +28,7 @@ export default async function Project() {
   });
 
   return (
-    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-4 sm:mt-8 lg:mt-0">
+    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-8 sm:mt-12 lg:mt-16">
       <PageHeading
         title="Projects"
         description="A curated selection of engineering initiatives focused on scalable systems, real-world data analysis, and end-to-end implementation. These projects demonstrate a commitment to rigorous fundamentals, clean architecture, and practical problem-solving."

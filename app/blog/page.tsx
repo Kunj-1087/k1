@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 
 export default async function Blog() {
   return (
-    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-4 sm:mt-8 lg:mt-0">
+    <main className="max-w-7xl mx-auto md:px-16 px-4 sm:px-6 mt-8 sm:mt-12 lg:mt-16">
       <header className="mb-8 sm:mb-10">
         <Slide>
           <div className="grid lg:grid-cols-2 grid-cols-1 gap-6 sm:gap-8">
